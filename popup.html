@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tab Hibernator</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Tab Hibernator</h1>
+      <div class="stats">
+        <span id="hibernated-count">0</span> tabs hibernated
+      </div>
+    </header>
+    
+    <div class="actions">
+      <button id="hibernate-all" class="primary-button">
+        Hibernate All Tabs
+      </button>
+    </div>
+    
+    <div class="settings">
+      <div class="setting">
+        <label class="switch">
+          <input type="checkbox" id="auto-hibernate">
+          <span class="slider"></span>
+        </label>
+        <div class="setting-text">
+          <span>Auto-hibernate inactive tabs</span>
+          <small>Hibernate tabs after <select id="hibernate-delay">
+            <option value="1">1 minute</option>
+            <option value="3">3 minutes</option>
+            <option value="5" selected>5 minutes</option>
+            <option value="10">10 minutes</option>
+            <option value="15">15 minutes</option>
+            <option value="30">30 minutes</option>
+          </select> of inactivity</small>
+        </div>
+      </div>
+      
+      <div class="setting">
+        <label class="switch">
+          <input type="checkbox" id="exclude-pinned">
+          <span class="slider"></span>
+        </label>
+        <div class="setting-text">
+          <span>Exclude pinned tabs</span>
+          <small>Pinned tabs will not be hibernated</small>
+        </div>
+      </div>
+      
+      <div class="setting">
+        <label class="switch">
+          <input type="checkbox" id="exclude-audible">
+          <span class="slider"></span>
+        </label>
+        <div class="setting-text">
+          <span>Exclude audible tabs</span>
+          <small>Tabs playing audio will not be hibernated</small>
+        </div>
+      </div>
+    </div>
+    
+    <footer>
+      <div class="memory-saved">
+        <span>Estimated memory saved: </span>
+        <span id="memory-saved">0 MB</span>
+      </div>
+    </footer>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
