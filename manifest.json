@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Tab Hibernator",
+  "version": "1.1.1",
+  "description": "Hibernate inactive tabs to save memory and improve performance.",
+  "permissions": [
+    "tabs"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/1.png",
+      "64": "images/1.png",
+      "128": "images/1.png"
+    }
+  },
+  "icons": {
+    "16": "images/1.png",
+    "64": "images/1.png",
+    "128": "images/1.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [ "hibernated.html", "hibernated.css", "hibernated.js" ],
+      "matches": [ "<all_urls>" ]
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f2f5;
+  color: #1c1e21;
+}
+.container {
+  text-align: center;
+  padding: 40px;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+#favicon {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 15px;
+    border-radius: 4px; /* Soften corners of favicons */
+}
+h1 {
+  font-size: 24px;
+  margin: 0 0 10px 0;
+}
+p {
+  font-size: 16px;
+  color: #606770;
+  margin: 0;
+}
